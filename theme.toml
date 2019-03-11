@@ -1,0 +1,13 @@
+name = "communiuty"
+license = "MIT"
+licenselink = "https://gitlab.com/ric_harvey/community/blob/master/LICENSE"
+description = "The easiest way to create websites for a single page community site"
+homepage = "https://gitlab.com/ric_harvey/community/"
+tags = ["community", "responsive", "l10n"]
+features = ["community", "responsive", "l10n"]
+min_version = "0.21"
+
+[author]
+  name = "ric_harvey"
+  homepage = "//digilution.io"
+

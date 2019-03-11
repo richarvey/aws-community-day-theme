@@ -1,0 +1,14 @@
+<header class="header">
+  <div class="wrapper">
+    <div class="logo"></div>
+    <h1 class="logo-name">Community Day</h1>
+    <div class="tagline"><h2>{{ .city }}</h2></div>
+    <div class="dateline"><h3>{{ .date }}</h3></div>
+
+    <div class="call-action-area">
+      {{ with .calltoaction }}
+        <a href="{{ .link }}" class="call-action-link" target="_blank" title="{{ .text }}">{{ .text }}</a>
+      {{ end }}
+    </div>
+  </div>
+</header>

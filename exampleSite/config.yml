@@ -1,0 +1,95 @@
+title: "Conference name"
+canonifyurls: true
+theme: "community"
+log: "true"
+logFile: "moo.txt" 
+
+params:
+  # Conference info
+  Name: "Community Day"
+  Description: "Conference description"
+  Date: "2nd April 2019"
+  Venue: "Victoria Warehouse"
+  Address: "Trafford Wharf Rd, Stretford, Manchester M17 1AB"
+  City:  "Manchester"
+  lon: "53.4644172"
+  lat: "-2.2851678"
+  map: "enabled"
+  number_of_tracks: "4" # temp hack one more than you need
+
+  # Active sections on the website to deactivate comment out with '#'
+  # you can also change order here and it will reflect on page
+  Sections:
+    - speakers
+    - schedule
+    - sponsors
+
+  # Titles which you can translate to other languages
+  Titles:
+    about: "About"
+    location: "Location"
+    speakers: "Speakers"
+    schedule: "Schedule"
+    sponsors: "Sponsors"
+
+  # The Call To Action button at the header,
+  # If you don't want this, just remove the callToAction property.
+  CallToAction:
+    text: "Register now!"
+    link: "http://register.example.com"
+
+  # List of Speakers
+  Speakers:
+    - name: "Ric Harvey"
+      photo: "/img/ric.png"
+      linkedin: "https://www.linkedin.com/in/richarvey/"
+      twitter: "ric__harvey"
+      git: "https://gitlab.com/ric_harvey"
+    - name: "Shafreen Sayyed"
+      photo: "/img/shafreen.png"
+      linkedin: "https://www.linkedin.com/in/shafreensayyed/"
+      twitter: "ShafreenSayyed"
+      git: "https://github.com/shasay"
+    - name: "Ross Barich"
+      photo: "/img/ross.png"
+      linkedin: "https://www.linkedin.com/in/rossbarich/"
+      twitter: "rossbarich"
+
+  # List of Sponsors
+  Sponsors:
+    - name: "AWS"
+      logo: "/img/aws_logo_smile.png"
+      url: "https://aws.amazon.com"
+    - name: "Hugo"
+      logo: "/img/hugo.png"
+      url: "http://gohugo.io"
+
+  # The entire schedule
+  Schedule:
+    - name: "Check-in / Breakfast"
+      time: "9h00"
+
+    - name: "Session 1"
+      time: "10h00"
+
+    - name: "Session 2"
+      time: "11h00"
+
+    - name: "Lunch"
+      time: "12h00"
+
+    - name: "Session 3"
+      time: "13h00"
+   
+    - name: "Session 4"
+      time: "14h00"
+    
+    - name: "Break"
+      time: "13h00"
+
+    - name: "Session 5"
+      time: "15h30"
+
+    - name: "Session 6"
+      time: "16h30"
+  

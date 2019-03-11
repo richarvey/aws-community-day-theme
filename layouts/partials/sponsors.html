@@ -1,0 +1,14 @@
+<h3 class="section-title">{{ .titles.sponsors }}</h3>
+
+<div class="sponsor-box">
+<div class="bxslider-sponsors">
+  {{ range $sponsors := .sponsors }}
+  <div style="font-size: 1.5em; margin: auto;">
+     <a href='{{ .url }}'>
+      <img src="{{ .logo }}" title="{{ .name }} 
+     </a>"
+   height="100px" itemprop="image"></div>
+  {{ end }}
+</div>
+</script>
+</div>

@@ -1,0 +1,93 @@
+<!doctype html>
+<html itemscope itemtype="http://schema.org/Event">
+<head>
+  <title itemprop="name">{{ .Site.Params.Name }}</title>
+
+  <meta charset="utf-8">
+  <meta name="author" content="{{ .Site.Params.Name }}" />
+  <meta name="description" content="{{ .Site.Params.Description }}">
+  <meta name="viewport" content="width=device-width">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  {{ .Hugo.Generator }}
+  {{ template "_internal/opengraph.html" . }}
+  {{ template "_internal/twitter_cards.html" . }}
+
+  <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+
+  <link rel="stylesheet" type="text/css" href="/css/main.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css" integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA==" crossorigin=""/>
+  <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js" integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg==" crossorigin=""></script>
+
+  <link rel="stylesheet" href="/css/jquery.bxslider.min.css">
+  <!-- jQuery library -->
+  <script src="/js/jquery-3.1.1.min.js"></script>
+  <!-- bxSlider Javascript file -->
+  <script src="/js/jquery.bxslider.js"></script>
+
+<script>
+        $(document).ready(function(){
+                $('.bxslider').bxSlider({
+                        mode: 'horizontal',
+                        moveSlides: 1,
+                        slideMargin: 80,
+                        infiniteLoop: false,
+                        slideWidth: 180,
+                        minSlides: 1,
+                        maxSlides: 3,
+                        captions: true,
+                        speed: 800,
+			hideControlOnEnd: true,
+                });
+        });
+</script>
+
+<script>
+        $(document).ready(function(){
+                $('.bxslider-sponsors').bxSlider({
+                        mode: 'horizontal',
+                        moveSlides: 1,
+                        slideMargin: 80,
+                        infiniteLoop: false,
+                        slideWidth: 180,
+                        minSlides: 1,
+                        maxSlides: 3,
+                        speed: 800,
+			hideControlOnEnd: true,
+                });
+        });
+</script>
+
+
+</script>
+
+</head>
+<body>
+  <div class="global">
+
+    {{ partial "header.html" .Site.Params }}
+
+    <div class="content" id="content">
+      <div class="mapwrapper">
+        {{ partial "location.html" .Site.Params }}
+      </div>
+      <div class="wrapper">
+        {{ range $section := .Site.Params.Sections }}
+          <section class="{{ $section }}" id="{{ $section }}">
+            {{ partial $section $.Site.Params }}
+          </section>
+        {{ end }}
+      </div>
+        <footer class="footer">
+          Made with ♥ by <a href="https://gitlab.com/ric_harvey/aws-community-day-theme" target="_blank">Community</a> :)<br/>Based on code from <a href="https://themes.gohugo.io/hugo-conference/">Hugo Conference</a><br/><br/>
+          <a href="https://aws.amazon.com/codesofconduct/">Code of Conduct</a> | <a href="https://aws.amazon.com/developer/community/">AWS Community</a> | <a href="aws.amazon.com">Amazon Web Services</a>
+        </footer>
+    </div>
+  </div>
+
+</body>
+</html>

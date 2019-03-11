@@ -1,0 +1,79 @@
+<h3 class="section-title">{{ .titles.schedule }}</h3>
+
+<link rel='stylesheet' href='/css/fullcalendar.css' />
+<link href='/css/fullcalendar.print.min.css' rel='stylesheet' media='print' />
+<link rel='stylesheet' href='/css/scheduler.css' />
+<script src='/js/moment.min.js'></script>
+<script src='/js/fullcalendar.js'></script>
+<script src='/js/scheduler.min.js'></script>
+
+
+<script>
+$(function() {
+
+  // page is now ready, initialize the calendar...
+
+  $('#calendar').fullCalendar({
+    // put your options and callbacks here
+    schedulerLicenseKey: 'GPL-My-Project-Is-Open-Source',
+    defaultView: 'agendaDay',
+    defaultDate: '2019-03-19',
+    editable: false,
+    selectable: false,
+    displayEventTime: false,
+    eventLimit: true, // allow "more" link when too many events
+    header: {
+      left: '',
+      center: '',
+      right: ''
+    },
+    eventRender: function(event, element) {
+      var el = element.html();
+      element.html(el + '<br/><h4>' + event.title + '</h4><br/><h5>' + event.speaker + '</h5><br/><p>' + event.description + '</p>' );
+      return element
+    },
+    //// uncomment this line to hide the all-day slot
+    allDaySlot: false,
+
+    businessHours: {
+     // days of week. an array of zero-based day of week integers (0=Sunday)
+      dow: [ 1, 2, 3, 4, 5 ], // Monday - Thursday
+
+      start: '09:00', // a start time (10am in this example)
+      end: '18:00', // an end time (6pm in this example)
+    },
+
+    resources: [
+      { id: '1', title: 'Track 1' },
+      { id: '2', title: 'Track 2', eventColor: 'green' },
+      { id: '3', title: 'Track 3', eventColor: 'orange' },
+      { id: '4', title: 'Track 4', eventColor: 'red' }
+     ],
+    events: [
+      { id: '1', resourceId: '1', start: '2019-03-19T09:00:00', end: '2019-03-19T14:00:00', title: 'event 1', speaker: "Ric Harvey", description: 'This is a description of event 1', rendering: 'background', className: 'event-text' },
+      { id: '2', resourceId: '2', start: '2019-03-19T09:00:00', end: '2019-03-19T14:00:00', title: 'event 2', speaker: "Ric Harvey", description: 'This is a description of event 2', rendering: 'background', className: 'event-text' },
+      { id: '3', resourceId: '2', start: '2019-03-19T14:30:00', end: '2019-03-19T16:50:00', title: 'event 3', speaker: "Ric Harvey", description: 'This is a description of event 3', rendering: 'background', className: 'event-text' },
+      { id: '4', resourceId: '3', start: '2019-03-19T07:30:00', end: '2019-03-19T09:30:00', title: 'event 4', speaker: "Ric Harvey", description: 'This is a description of event 4', rendering: 'background', className: 'event-text' },
+      { id: '5', resourceId: '4', start: '2019-03-19T10:00:00', end: '2019-03-19T15:00:00', title: 'event 5', speaker: "Ric Harvey", description: 'This is a description of event 5', rendering: 'background', className: 'event-text' }
+    ]
+  })
+});
+</script>
+
+<style>
+
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: "Lucida Grande",Helvetica,Arial,Verdana,sans-serif;
+    font-size: 14px;
+  }
+
+  #calendar {
+    max-width: 900px;
+    margin: 50px auto;
+  }
+
+</style>
+
+<div id='calendar'></div>

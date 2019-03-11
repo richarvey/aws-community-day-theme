@@ -1,0 +1,19 @@
+<h3 class="section-title">{{ .titles.speakers }}</h3>
+
+<div class="speaker-box">
+<div class="bxslider">
+  {{ range $speaker := .speakers }}
+    <div style="font-size: 1.5em; text-align: center;"><img src="{{ .photo }}" title="{{ .name }}<br/><br/>
+      {{ if .twitter }}
+        <a href='https://twitter.com/{{ .twitter }}'><i class='fab fa-twitter'></i></a>
+      {{ end }}
+      {{ if .linkedin }}
+        <a href='{{ .linkedin }}'><i class='fab fa-linkedin-in'></i></a>
+      {{ end }}
+      {{ if .git }}
+        <a href='{{ .git }}'><i class='fab fa-git'></i></a>
+      {{ end }}"
+    width="180px" itemprop="image"></div>
+  {{ end }}
+</div>
+</div>
