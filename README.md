@@ -33,6 +33,7 @@ Run the following commands to get started:
 ```bash
 cd themes/aws-community-day-theme/exampleSite
 cp -Rf * ../../../
+cd ../../../
 rm config.toml
 ```
 
