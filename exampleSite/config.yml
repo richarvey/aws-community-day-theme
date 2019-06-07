@@ -1,6 +1,6 @@
 title: "Conference name"
 canonifyurls: true
-theme: "community"
+theme: "aws-community-day-theme"
 log: "true"
 logFile: "moo.txt" 
 
