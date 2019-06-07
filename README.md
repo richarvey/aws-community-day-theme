@@ -48,4 +48,3 @@ hugo server --watch
 
 Now browse to [http://localhost:1313](http://localhost:1313)
 
-**Note:** Before you go live edit config.yaml and change the base URL
