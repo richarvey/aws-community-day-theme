@@ -49,3 +49,6 @@ hugo server --watch
 
 Now browse to [http://localhost:1313](http://localhost:1313)
 
+## Example site screenshot
+
+![Example site Screenshot](/screenshot.png)
